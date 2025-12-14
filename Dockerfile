@@ -2,11 +2,11 @@ FROM python:3.13-slim
 
 LABEL maintainer="artemshlychkin1995@gmail.com"
 
-ENV PYTHONUBUFFERED=1
+ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
+COPY cinema/ requirements.txt
 RUN pip install -r requirements.txt
 
 COPY . .
