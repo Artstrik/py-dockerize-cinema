@@ -1,10 +1,10 @@
-FROM python:3.13-alpine
+FROM python:3.13-slim
 
 LABEL maintainer="artemshlychkin1995@gmail.com"
 
-ENV PYTHOUNBUFFERED=1
+ENV PYTHONUBUFFERED=1
 
-WORKDIR /app/
+WORKDIR /app
 
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
